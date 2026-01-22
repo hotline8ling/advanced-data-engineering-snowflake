@@ -64,9 +64,11 @@ CREATE OR ALTER TABLE {{env}}_tasty_bytes.raw_pos.country
    iso_currency VARCHAR(3),
    iso_country VARCHAR(2),
    city VARCHAR(16777216),
-   city_population VARCHAR(16777216),
-   city_id NUMBER(19,0)
+   city_population VARCHAR(16777216)
 );
+
+ALTER TABLE {{env}}_tasty_bytes.raw_pos.country 
+ADD COLUMN city_id NUMBER(19,0);
 
 
 -- franchise table build
